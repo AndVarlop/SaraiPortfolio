@@ -66,20 +66,28 @@ button {
 /* ============== MEDIUM DEVICES =============== */
 
 @media screen and (max-width:1200px) {
+    /*.contact__options{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+    }*/
     .container.contact__container{
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     button {
-        left: 38%;
+        left: 35%;
     }
  }
  
  /* ============== SMALL DEVICES =============== */
  
  @media screen and (max-width:670px) {
+    .contact__options{
+        display: flex ;
+    }
     button{
-        left: 20%;
+        left: 30%;
     }
     
  }

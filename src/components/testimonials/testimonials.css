@@ -47,6 +47,9 @@
  /* ============== SMALL DEVICES =============== */
  
  @media screen and (max-width:670px) {
+    #testimonials {
+        height: 120vh;
+    }
     .container.testimonials__container{
         width: 50%;
     }

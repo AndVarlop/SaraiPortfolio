@@ -88,14 +88,14 @@ header {
 
 @media screen and (max-width:1028px) {
     .header {
-        height: 68vh;
+        height: 100vh;
     }
     .cta{
         margin-top: -1rem;
     }
     .me {
-        margin-top: 1rem;
-        border-radius: 10rem 0 10rem 0;
+        margin-top: 2rem;
+        border-radius: 2rem 0 2rem 0;
         transition: var(--transition);
     }
 
@@ -122,7 +122,6 @@ header {
         height: 18.5rem;
         left: calc(50% - 7.5rem);
         border-radius: 10rem 10rem 0 0;
-        padding: 2rem 0rem 1rem 1rem;
         transition: var(--transition);
     }
 

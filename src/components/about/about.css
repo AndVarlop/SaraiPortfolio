@@ -98,20 +98,24 @@
 
 @media screen and (max-width:1024px) {
     #about{
-        height: 140vh;
-        padding-top: 0.1rem;
+        height: 150vh;
+        padding-top: 10rem;
     }
+    
     .about__container {
         padding-top: 0rem;
         grid-template-columns: 1fr;
         gap: 0;
     }
     .about__me{
-        width: 50%;
-        margin: 2rem auto 4rem;
+        width: 30%;
+        margin: 5rem auto 5rem;
     }
     .about__content p , a {
         margin: 1rem 0 1rem;
+    }
+    .about__card {
+        margin-bottom: 2rem;
     }
 }
 
@@ -119,14 +123,18 @@
 
 @media screen and (max-width:600px) {
     #about{
-        height: 160vh;
+        height: 255vh;
     }
     .about__me{
         width: 65%;
         margin: 0 auto 3rem;
     }
+    .about__me {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
     .about__cards {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
     .about__content  {

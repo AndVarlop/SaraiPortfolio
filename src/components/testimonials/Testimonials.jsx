@@ -1,7 +1,7 @@
 import React from 'react'
 import './testimonials.css'
 import AVTR1 from '../../assets/AVATAR0.jpg'
-import AVTR3 from '../../assets/AVATAR1.jpg'
+import AVTR3 from '../../assets/avatar.jpg'
 import AVTR4 from '../../assets/AVATAR2.jpg'
 import AVTR5 from '../../assets/AVATAR3.jpg'
 import AVTR6 from '../../assets/AVATAR4.jpg'
@@ -30,7 +30,7 @@ const data = [
     avatar: AVTR1,
     name: 'Juan Sebastian Gallon',
     text: "Andrés is a true team leader. When we work together, he always makes sure we're all on the same page and distributes responsibilities fairly. He is a reliable partner."
-  },*/
+  },
   {
     avatar: AVTR4,
     name: 'Miguel Negrete Nuñez',
@@ -60,7 +60,7 @@ const data = [
     avatar: AVTR9,
     name: 'Alexander Henry Varela',
     text: "Andrés is an exceptional creative. His mind is always coming up with new ideas and innovative approaches to solving problems. It's great to have someone like him on the team to come up with fresh solutions."
-  }
+  }*/
 ]
 
 const testimonials = () => {
