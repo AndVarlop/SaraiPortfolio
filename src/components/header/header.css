@@ -87,8 +87,9 @@ header {
 /* ============== MEDIUM DEVICES =============== */
 
 @media screen and (max-width:1028px) {
-    .header {
-        height: auto;
+    header {
+        margin-top: 5vh;
+        height: 120vh;
     }
     .cta{
         margin-top: -1rem;
@@ -113,9 +114,8 @@ header {
 /* ============== SMALL DEVICES =============== */
 @media screen and (max-width:1050px) {
     header {
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-        height: 110vh;
+        margin-top: 5vh;
+        height: 120vh;
     }
     .me {
         width: 15rem;
@@ -129,8 +129,9 @@ header {
 }
 
 @media screen and (max-width:670px) {
-    .header {
-        height: auto;
+    header {
+        margin-top: 5vh;
+        height: 120vh;
     }
 
     .me {
@@ -149,7 +150,8 @@ header {
 
 @media screen and (max-width:450px) {
     header {
-        height: 90vh;
+        margin-top: 5vh;
+        height: 120vh;
     }
 
     .me {
@@ -163,6 +165,7 @@ header {
 
 @media screen and (max-width:390px) {
     header {
+        margin-top: 5vh;
         height: 120vh;
     }
 
