@@ -98,7 +98,7 @@
 
 @media screen and (max-width:1024px) {
     #about{
-        height: 90vh;
+        height: auto;
         padding: 0 0 0 0;
         margin: 0 0 0 0;
         padding-top: 10vh;
@@ -123,9 +123,9 @@
 
 /* ============== SMALL DEVICES =============== */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
     #about{
-        height: 255vh;
+        height: auto;
     }
     .about__me{
         width: 70%;
@@ -151,14 +151,14 @@
     #about{
         padding: 0 0 0 0;
         margin-top: 10vh;
-        height: 170vh;
+        height: auto;
     }
 }
 
 @media screen and (max-width:390px) {
     #about{
         padding: 0 0 0 0;
-        margin-top: 0vh;
-        height: 220vh;
+        margin-top: 10vh;
+        height: auto;
     }
 }

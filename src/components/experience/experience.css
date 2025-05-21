@@ -129,7 +129,7 @@
 @media screen and (max-width:1200px) {
     #experience{
         padding-top: 8rem;
-        height: 270vh;
+        height: auto;
         padding-bottom: 20rem;
     }
     .experience__container{
@@ -150,7 +150,8 @@
     #experience {
         margin: 0 0 0 0;
         padding: 0 0 0 0;
-        height: 120vh;
+        margin-top: 10vh;
+        height: auto;
     }
 }
 
@@ -158,8 +159,8 @@
 
 @media screen and (max-width:800px) {
     #experience{
-        padding-top: 6rem;
-        height: 390vh;
+        margin-top: 10vh;
+        height: auto;
     }
     .experience__container{
         padding-top: 1rem;
@@ -176,7 +177,7 @@
         padding: 0 0 0 0;
         margin: 0 0 0 0;
         padding-top: 10vh;
-        height: 290vh;
+        height: auto;
     }
 }
 
@@ -184,7 +185,7 @@
     #experience{
         padding: 0 0 0 0;
         margin: 0 0 0 0;
-        height: 410vh;
+        height: auto;
         margin-top: 10vh;
     }
 }

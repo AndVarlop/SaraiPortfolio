@@ -89,6 +89,11 @@ button {
  /* ============== SMALL DEVICES =============== */
  
  @media screen and (max-width:670px) {
+    #contact{
+        margin-top: 10vh;
+        height: auto;
+    }
+    
     .contact__options{
         display: flex ;
     }
@@ -100,7 +105,8 @@ button {
 
   @media screen and (max-width:450px) {
     #contact{
-        height: 137vh;
+        margin-top: 10vh;
+        height: auto;
     }
     button{
         left: 23%;
@@ -110,7 +116,7 @@ button {
 
    @media screen and (max-width:390px) {
     #contact{
-        height: 200vh;
+        height: auto;
         margin: 0 0 0 0;
         margin-top: 10vh;
     }

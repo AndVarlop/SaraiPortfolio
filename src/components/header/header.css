@@ -45,7 +45,7 @@ header {
 .me {
     background: repeating-linear-gradient(-45deg, var(--color-primary), black 50px);
     width: 15rem;
-    height: 19rem;
+    height: 23rem;
     position: absolute;
     left: calc(50% - 7.5rem);
     margin-top: 1rem;
@@ -88,7 +88,7 @@ header {
 
 @media screen and (max-width:1028px) {
     .header {
-        height: 100vh;
+        height: auto;
     }
     .cta{
         margin-top: -1rem;
@@ -115,7 +115,11 @@ header {
     header {
         margin: 0 0 0 0;
         padding: 0 0 0 0;
-        height: 50vh;
+        height: 110vh;
+    }
+    .me {
+        width: 15rem;
+        height: 22rem;
     }
 
     .header__socials,
@@ -126,12 +130,12 @@ header {
 
 @media screen and (max-width:670px) {
     .header {
-        height: 100vh;
+        height: auto;
     }
 
     .me {
         width: 15rem;
-        height: 18.5rem;
+        height: 25rem;
         left: calc(50% - 7.5rem);
         border-radius: 10rem 10rem 0 0;
         transition: var(--transition);

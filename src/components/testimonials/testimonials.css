@@ -46,7 +46,8 @@
 
  @media screen and (max-width:1050px) {
     #testimonials {
-        height: 55vh;
+        margin-top: 10vh;
+        height: auto;
     }
  }
  
@@ -54,7 +55,8 @@
  
  @media screen and (max-width:670px) {
     #testimonials {
-        height: 120vh;
+        margin-top: 10vh;
+        height: auto;
     }
     .container.testimonials__container{
         width: 50%;
@@ -66,13 +68,15 @@
 
  @media screen and (max-width:450px) {
     #testimonials {
-        height: 100vh;
+        margin-top: 10vh;
+        height: auto;
     }
  }
 
  @media screen and (max-width:390px) {
     #testimonials {
-        height: 140vh;
+        margin-top: 10vh;
+        height: auto;
     }
  }
 
