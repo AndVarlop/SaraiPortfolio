@@ -43,6 +43,12 @@
         width: 60%;
     }
  }
+
+ @media screen and (max-width:1050px) {
+    #testimonials {
+        height: 55vh;
+    }
+ }
  
  /* ============== SMALL DEVICES =============== */
  
@@ -55,6 +61,18 @@
     }
     .client__review{
         width: 100%;
+    }
+ }
+
+ @media screen and (max-width:450px) {
+    #testimonials {
+        height: 100vh;
+    }
+ }
+
+ @media screen and (max-width:390px) {
+    #testimonials {
+        height: 140vh;
     }
  }
 

@@ -1,7 +1,8 @@
-#services{
+#services {
     padding-top: 2rem;
     height: auto;
 }
+
 .services__container {
     padding-top: 2rem;
     display: grid;
@@ -10,7 +11,7 @@
 }
 
 .service {
-    background: linear-gradient(black,var(--color-bg),black);
+    background: linear-gradient(black, var(--color-bg), black);
     border-radius: 0 0 2rem 2rem;
     border: 1px solid var(--color-primary);
     height: fit-content;
@@ -18,7 +19,7 @@
 }
 
 .service:hover {
-    background: linear-gradient(var(--color-bg),black,var(--color-bg));
+    background: linear-gradient(var(--color-bg), black, var(--color-bg));
     border-color: var(--color-bg-variant);
     cursor: default;
     transition: var(--transition);
@@ -30,6 +31,7 @@
     border-radius: 0 0 2rem 2rem;
     box-shadow: 0 2rem 1rem rgb(0, 0, 0, 0.1);
 }
+
 .service__head h3 {
     color: var(--color-bg);
     font-size: 1rem;
@@ -39,16 +41,19 @@
 .service__list {
     padding: 2rem;
 }
-.service__list li{
+
+.service__list li {
     display: flex;
     gap: 1rem;
     margin-bottom: 0.8rem;
 }
-.service__list-icon{
+
+.service__list-icon {
     color: var(--color-primary);
     margin-top: 2px;
     font-size: 1.5rem;
 }
+
 .service__list p {
     font-size: 0.9rem;
 }
@@ -56,23 +61,55 @@
 /* ============== MEDIUM DEVICES =============== */
 
 @media screen and (max-width:1200px) {
-    #services{
+    #services {
         height: auto;
     }
-    .services__container{
+
+    .services__container {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
+
     .service {
         height: auto;
     }
 }
 
+@media screen and (max-width:1050px) {
+    #services {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        height: 70vh;
+    }
+}
 /* ============== SMALL DEVICES =============== */
 
 @media screen and (max-width:800px) {
-    .services__container{
+    .services__container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #services {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        margin-top: 10vh;
+        height: 180vh;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #services {
+        margin-top: 10vh;
+        height: 255vh;
+    }
+}
+
+@media screen and (max-width:360px) {
+    #services {
+        margin-top: 10vh;
+        height: 240vh;
     }
 }

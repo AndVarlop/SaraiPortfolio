@@ -98,8 +98,10 @@
 
 @media screen and (max-width:1024px) {
     #about{
-        height: 150vh;
-        padding-top: 10rem;
+        height: 90vh;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        padding-top: 10vh;
     }
     
     .about__container {
@@ -126,7 +128,7 @@
         height: 255vh;
     }
     .about__me{
-        width: 65%;
+        width: 70%;
         margin: 0 auto 3rem;
     }
     .about__me {
@@ -142,5 +144,21 @@
     }
     .about__content p {
         margin: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    #about{
+        padding: 0 0 0 0;
+        margin-top: 10vh;
+        height: 170vh;
+    }
+}
+
+@media screen and (max-width:390px) {
+    #about{
+        padding: 0 0 0 0;
+        margin-top: 0vh;
+        height: 220vh;
     }
 }

@@ -146,6 +146,14 @@
     }
 }
 
+@media screen and (max-width:1050px) {
+    #experience {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        height: 120vh;
+    }
+}
+
 /* ============== SMALL DEVICES =============== */
 
 @media screen and (max-width:800px) {
@@ -163,3 +171,20 @@
     }
 }
 
+@media screen and (max-width:450px) {
+    #experience{
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        padding-top: 10vh;
+        height: 290vh;
+    }
+}
+
+@media screen and (max-width:390px) {
+    #experience{
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        height: 410vh;
+        margin-top: 10vh;
+    }
+}

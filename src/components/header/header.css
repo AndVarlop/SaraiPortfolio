@@ -111,6 +111,18 @@ header {
 }
 
 /* ============== SMALL DEVICES =============== */
+@media screen and (max-width:1050px) {
+    header {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        height: 50vh;
+    }
+
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+}
 
 @media screen and (max-width:670px) {
     .header {
@@ -128,5 +140,33 @@ header {
     .header__socials,
     .scroll__down {
         display: none;
+    }
+}
+
+@media screen and (max-width:450px) {
+    header {
+        height: 90vh;
+    }
+
+    .me {
+        width: 15rem;
+        height: 25rem;
+        left: calc(50% - 7.5rem);
+        border-radius: 10rem 10rem 0 0;
+        transition: var(--transition);
+    }
+}
+
+@media screen and (max-width:390px) {
+    header {
+        height: 120vh;
+    }
+
+    .me {
+        width: 15rem;
+        height: 25rem;
+        left: calc(50% - 7.5rem);
+        border-radius: 10rem 10rem 0 0;
+        transition: var(--transition);
     }
 }
