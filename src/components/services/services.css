@@ -104,13 +104,13 @@
 @media screen and (max-width:400px) {
     #services {
         margin-top: 10vh;
-        height: 255vh;
+        height: auto;
     }
 }
 
 @media screen and (max-width:360px) {
     #services {
         margin-top: 10vh;
-        height: 240vh;
+        height: auto;
     }
 }

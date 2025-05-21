@@ -67,8 +67,8 @@ const testimonials = () => {
   return (
     <section id='testimonials'>
       <div className="container title__container">
-        <h3 className='text-light'>Review from clients</h3>
-        <h1>Testimonials</h1>
+        <h3 className='text-light'></h3>
+        <h1>Referencias</h1>
       </div>
       <Swiper className="container testimonials__container"
         effect={'cards'}
