@@ -11,31 +11,35 @@
 }
 
 .service {
-    background: linear-gradient(black, var(--color-bg), black);
-    border-radius: 0 0 2rem 2rem;
-    border: 1px solid var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 1.2rem;
+    border: 1px solid var(--color-border);
     height: fit-content;
     transition: var(--transition);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
 }
 
 .service:hover {
-    background: linear-gradient(var(--color-bg), black, var(--color-bg));
-    border-color: var(--color-bg-variant);
+    background: var(--color-primary-glow);
+    border-color: rgba(210, 155, 253, 0.35);
     cursor: default;
-    transition: var(--transition);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(210, 155, 253, 0.08);
 }
 
 .service__head {
-    background: var(--color-primary);
-    padding: 2rem;
-    border-radius: 0 0 2rem 2rem;
-    box-shadow: 0 2rem 1rem rgb(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(210, 155, 253, 0.15), rgba(210, 155, 253, 0.05));
+    border-bottom: 1px solid rgba(210, 155, 253, 0.15);
+    padding: 1.5rem 2rem;
 }
 
 .service__head h3 {
-    color: var(--color-bg);
+    color: var(--color-primary);
     font-size: 1rem;
     text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 .service__list {
@@ -59,58 +63,40 @@
 }
 
 /* ============== MEDIUM DEVICES =============== */
-
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1024px) {
     #services {
         height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
-
     .services__container {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-
-    .service {
-        height: auto;
-    }
 }
 
-@media screen and (max-width:1050px) {
+/* ============== TABLET =============== */
+@media screen and (max-width: 768px) {
     #services {
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-        margin-top: 10vh;
-        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
-}
-/* ============== SMALL DEVICES =============== */
-
-@media screen and (max-width:800px) {
     .services__container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 }
 
-@media screen and (max-width:500px) {
+/* ============== SMALL DEVICES =============== */
+@media screen and (max-width: 480px) {
     #services {
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-        margin-top: 10vh;
-        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
     }
-}
-
-@media screen and (max-width:400px) {
-    #services {
-        margin-top: 10vh;
-        height: auto;
+    .service__list {
+        padding: 1.2rem;
     }
-}
-
-@media screen and (max-width:360px) {
-    #services {
-        margin-top: 10vh;
-        height: auto;
+    .service__head {
+        padding: 1.2rem;
     }
 }

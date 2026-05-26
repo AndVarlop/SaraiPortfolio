@@ -1,79 +1,64 @@
 import React from 'react'
 import './experience.css'
-import { BsPatchCheckFill } from 'react-icons/bs'
+import { useStaggerReveal } from '../../hooks/useScrollReveal'
+
+const jobs = [
+  {
+    company: 'COVISIAN',
+    period: '2025 - Actualidad',
+    desc: 'Atención al cliente para el mercado español, brindando soporte, gestionando consultas y resolviendo incidencias. Análisis de requerimientos de clientes y generación de especificaciones claras conforme a estándares de calidad.'
+  },
+  {
+    company: 'CENTRO DE BIENESTAR ANIMAL',
+    period: '2024 - 2025',
+    desc: 'Apoyo en tareas clínicas y de manejo animal durante 6 meses de prácticas. Asistencia en consultas, preparación de quirófano, manejo seguro de animales y organización de la información clínica. Reconocida por responsabilidad y trabajo en equipo.'
+  },
+  {
+    company: 'MAJOREL COLOMBIA',
+    period: '2023 - 2024',
+    desc: 'Soporte multicanal (chat, correo y llamadas) para clientes del mercado español. Gestión de consultas, resolución de incidencias, seguimiento de casos y registro en CRM con trazabilidad de interacciones.'
+  },
+  {
+    company: 'CLARO HOGAR ALIADO ALTYCOM',
+    period: '2021 - 2023',
+    desc: 'Back Office para seguimiento y recuperación de ventas del equipo comercial. Elaboración y mantenimiento de reportes en Excel, control de datos y trazabilidad de operaciones comerciales.'
+  },
+  {
+    company: 'UNIVERSIDAD AUTONOMA DEL CARIBE',
+    period: '2021',
+    desc: 'Agente de call center encargado de contactar estudiantes para procesos de matrícula y elaborar informes en Excel con la información recopilada.'
+  },
+  {
+    company: 'ARMILY SPORT',
+    period: '2019 - 2020',
+    desc: 'Asesora comercial en punto de venta ofreciendo asesoramiento personalizado sobre productos deportivos y acompañando al cliente durante todo el proceso de compra.'
+  },
+  {
+    company: 'COLEGIO JOSE CASTILLO BOLIVAR',
+    period: '2018 - 2019',
+    desc: 'Auxiliar docente en grados 1°, 2° y 3°, apoyando actividades pedagógicas, preparación de materiales y refuerzo individual a estudiantes.'
+  }
+]
 
 const Experience = () => {
+  const gridRef = useStaggerReveal('.experience__content')
+
   return (
     <section id='experience'>
-      <h3>Que Habilidades Tengo</h3>
-      <h2>Mi Experiencia</h2>
-      <div className="container experience__container">
-          <div className="experience__content">
+      <h3>Trayectoria</h3>
+      <h2>Experiencia Laboral</h2>
+      <div className="container experience__container" ref={gridRef}>
+        {jobs.map((job, i) => (
+          <div className="experience__content" key={i}>
             <article className="experience__details">
               <div>
-                <h2>CENTRO DE BIENESTAR ANIMAL</h2><br />
-                <h4>2024 - 2025</h4>
-                <small className='text-light'>- Apoyo en tareas clínicas y de manejo animal durante 6 meses de 
-                  prácticas en entorno veterinario. Destacado por la responsabilidad, compromiso y rápida 
-                  adaptación al trabajo en equipo, recibiendo excelentes valoraciones por parte del personal a cargo.</small>
+                <h2>{job.company}</h2>
+                <h4>{job.period}</h4>
+                <small className='text-light'>{job.desc}</small>
               </div>
             </article>
           </div>
-          <div className="experience__content">
-            <article className="experience__details">
-              <div>
-                <h2>MAJOREL COLOMBIA</h2><br />
-                <h4>2023 - 2024</h4>
-                <small className='text-light'>- Encargado de brindar soporte a clientes del mercado español 
-                  mediante canales como chat, correo y llamadas. Gestión de consultas, resolución de incidencias 
-                  y seguimiento de casos, garantizando una comunicación efectiva y adaptada al contexto cultural 
-                  y lingüístico. Manejo de CRM para el registro y trazabilidad de interacciones.     </small>
-              </div>
-            </article>
-          </div>
-          <div className="experience__content">
-            <article className="experience__details">
-              <div>
-                <h2>CLARO HOGAR ALIADO ALTYCOM</h2><br />
-                <h4>2021 - 2023</h4>
-                <small className='text-light'>- Encargado del seguimiento y recuperación de ventas realizadas
-                   por el equipo comercial, utilizando herramientas internas y Excel para el análisis y control
-                    de datos. Apoyo clave en la optimización de procesos y cumplimiento de objetivos comerciales.</small>
-              </div>
-            </article>
-          </div>
-          <div className="experience__content">
-            <article className="experience__details">
-              <div>
-                <h2>UNIVERSIDAD AUTONOMA DEL CARIBE</h2><br />
-                <h4>2021 - 2021</h4>
-                <small className='text-light'>- Responsable de contactar estudiantes para gestionar procesos
-                   de matrícula. Registro y actualización de datos en informes mediante Excel, asegurando precisión
-                    y seguimiento adecuado de cada caso.</small>
-              </div>
-            </article>
-          </div>
-          <div className="experience__content">
-            <article className="experience__details">
-              <div>
-                <h2>ARMILY SPORT</h2><br />
-                <h4>2019 - 2020</h4>
-                <small className='text-light'>- Asesora comercial en local comercial vendiendo
-                  productos deportivos.</small>
-              </div>
-            </article>
-          </div>
-          <div className="experience__content">
-            <article className="experience__details">
-              <div>
-                <h2>COLEGIO JOSE CASTILLO BOLIVAR</h2><br />
-                <h4>2018 - 2019</h4>
-                <small className='text-light'>- Apoyo en actividades académicas y formativas en grados 1°, 2° y 3°. 
-                  Colaboración en la preparación de materiales, acompañamiento en clase y refuerzo individual a 
-                  estudiantes, fomentando un ambiente de aprendizaje positivo y participativo.</small>
-              </div>
-            </article>
-          </div> 
+        ))}
       </div>
     </section>
   )

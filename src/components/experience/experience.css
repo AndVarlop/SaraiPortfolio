@@ -16,43 +16,39 @@
 }
 
 .experience__container > div {
-    background: linear-gradient(rgba(115, 0, 126, 0.983),black,rgba(66, 0, 63, 0.983));
+    background: var(--color-surface);
     margin-top: 2rem;
-    padding: 2rem 2rem;
-    border-radius: 4rem;
-    border: 2px solid transparent;
-    border-color: var(--color-primary);
-    border-width: .2px;
-    border-style: solid;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-border);
     transition: var(--transition);
+    backdrop-filter: blur(8px);
 }
 
 .experience__container_alone > div {
-    background: linear-gradient(rgba(9, 50, 0, 0.983),black,rgba(9, 50, 0, 0.983));
+    background: var(--color-surface);
     margin-top: 2rem;
-    padding: 2rem 2rem;
-    border-radius: 4rem;
-    border: 2px solid transparent;
-    border-color: var(--color-primary);
-    border-width: .2px;
-    border-style: solid;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-border);
     transition: var(--transition);
+    backdrop-filter: blur(8px);
 }
 
 .experience__container > div:hover {
-    background: linear-gradient(black,transparent,black);
-    border-color: var(--color-primary-variant);
+    background: var(--color-primary-glow);
+    border-color: rgba(210, 155, 253, 0.3);
     cursor: default;
-    border-radius: 2rem;
-    transition: var(--transition);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(210, 155, 253, 0.08);
 }
 
 .experience__container_alone > div:hover {
-    background: linear-gradient(black,transparent,black);
-    border-color: var(--color-primary-variant);
+    background: var(--color-primary-glow);
+    border-color: rgba(210, 155, 253, 0.3);
     cursor: default;
-    border-radius: 2rem;
-    transition: var(--transition);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(210, 155, 253, 0.08);
 }
 
 
@@ -125,67 +121,50 @@
 }
 
 /* ============== MEDIUM DEVICES =============== */
-
-@media screen and (max-width:1200px) {
-    #experience{
-        padding-top: 8rem;
+@media screen and (max-width: 1024px) {
+    #experience {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         height: auto;
-        padding-bottom: 20rem;
     }
-    .experience__container{
-        padding-top: 2rem;
+    .experience__container {
         grid-template-columns: 1fr 1fr;
+        padding-top: 1rem;
     }
     .experience__container > div {
-        padding: 1.2rem;
-        margin: 0 auto;
-    }
-    .experience__content{
-        padding: 1rem;
-        grid-template-columns: 1fr;
+        padding: 1.5rem;
     }
 }
 
-@media screen and (max-width:1050px) {
+/* ============== TABLET =============== */
+@media screen and (max-width: 768px) {
     #experience {
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
-        margin-top: 10vh;
-        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+    .experience__content {
+        grid-template-columns: 1fr;
     }
 }
 
 /* ============== SMALL DEVICES =============== */
-
-@media screen and (max-width:800px) {
-    #experience{
-        margin-top: 10vh;
-        height: auto;
+@media screen and (max-width: 480px) {
+    #experience {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
     }
-    .experience__container{
-        padding-top: 1rem;
-        grid-template-columns: 1fr;
-    }
-    .experience__content{
-        padding: 0rem;
-        grid-template-columns: 1fr;
+    .experience__container > div {
+        padding: 1.2rem;
+        border-radius: 2rem;
     }
 }
 
-@media screen and (max-width:450px) {
-    #experience{
-        padding: 0 0 0 0;
-        margin: 0 0 0 0;
-        padding-top: 10vh;
-        height: auto;
-    }
-}
-
-@media screen and (max-width:390px) {
-    #experience{
-        padding: 0 0 0 0;
-        margin: 0 0 0 0;
-        height: auto;
-        margin-top: 10vh;
+@media screen and (max-width: 360px) {
+    .experience__container > div {
+        padding: 1rem;
+        border-radius: 1.5rem;
     }
 }

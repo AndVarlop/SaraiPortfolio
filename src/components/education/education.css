@@ -1,0 +1,143 @@
+#education {
+    padding-top: 2rem;
+    height: auto;
+    padding-bottom: 4rem;
+}
+
+.edu__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.edu__card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: var(--transition);
+    backdrop-filter: blur(8px);
+}
+
+.edu__card:hover {
+    background: var(--color-primary-glow);
+    border-color: rgba(210, 155, 253, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(210, 155, 253, 0.08);
+}
+
+.edu__card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.edu__icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+}
+
+.edu__card-header h3 {
+    font-size: 1.1rem;
+    text-align: left;
+    color: var(--color-white);
+    margin-bottom: 0.3rem;
+}
+
+.edu__card-header h4 {
+    font-size: 0.9rem;
+    text-align: left;
+    color: var(--color-light);
+    font-weight: 400;
+}
+
+.edu__year {
+    display: inline-block;
+    margin-top: 0.4rem;
+    background: var(--color-primary-variant);
+    color: var(--color-primary);
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.edu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.edu__list li {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+}
+
+.edu__star {
+    color: var(--color-primary);
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.edu__list p {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ============== MEDIUM DEVICES =============== */
+@media screen and (max-width: 1024px) {
+    #education {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .edu__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ============== TABLET =============== */
+@media screen and (max-width: 768px) {
+    #education {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .edu__card {
+        padding: 1.5rem;
+    }
+}
+
+/* ============== SMALL DEVICES =============== */
+@media screen and (max-width: 480px) {
+    #education {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+    }
+    .edu__card {
+        padding: 1.2rem;
+        border-radius: 1.5rem;
+    }
+    .edu__card-header {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .edu__icon {
+        font-size: 2rem;
+    }
+    .edu__card-header h3 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .edu__card-header h3 {
+        font-size: 0.9rem;
+    }
+}

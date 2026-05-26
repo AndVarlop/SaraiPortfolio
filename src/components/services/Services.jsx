@@ -1,71 +1,75 @@
 import React from 'react'
 import './services.css'
-import {BiCheck} from 'react-icons/bi'
+import { BiCheck } from 'react-icons/bi'
+import { useStaggerReveal } from '../../hooks/useScrollReveal'
+
+const skills = [
+  {
+    title: 'Apoyo Veterinario',
+    items: [
+      'Asistencia en consultas y procedimientos menores',
+      'Manejo seguro y amable de animales',
+      'Preparación de quirófano y material estéril',
+      'Limpieza y desinfección de salas clínicas',
+      'Apoyo administrativo en clínica veterinaria'
+    ]
+  },
+  {
+    title: 'Atención al Cliente',
+    items: [
+      'Soporte multicanal: teléfono, chat y correo',
+      'Mercado español — Inglés B1+',
+      'Resolución de incidencias y seguimiento de casos',
+      'Registro y gestión en CRM',
+      'Comunicación empática y orientada al usuario'
+    ]
+  },
+  {
+    title: 'Back Office & Datos',
+    items: [
+      'Seguimiento y recuperación de ventas',
+      'Elaboración de reportes en Excel',
+      'Gestión de bases de datos y aplicativos internos',
+      'Trazabilidad de operaciones comerciales',
+      'Control y análisis de información'
+    ]
+  },
+  {
+    title: 'Habilidades Transversales',
+    items: [
+      'Trabajo en equipo y comunicación efectiva',
+      'Organización y gestión del tiempo',
+      'Adaptación rápida a nuevos entornos',
+      'Orientación al cumplimiento de objetivos',
+      'Empatía y servicio al cliente'
+    ]
+  }
+]
 
 const Services = () => {
+  const gridRef = useStaggerReveal('.service')
+
   return (
     <section id='services'>
       <h2>Habilidades</h2>
-      <h3>...</h3>
+      <h3>Lo que puedo aportar</h3>
 
-      <div className="container services__container">
-        <article className="service">
-          <div className="service__head">
-            <h3>Apoyo en Entornos Veterinarios</h3> 
-          </div>
-          <ul className="service__list">
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Experiencia como asistente veterinario durante prácticas, colaborando en el manejo animal
-                 y tareas clínicas básicas. Reconocido por la responsabilidad, empatía y trabajo en equipo.</p>
-            </li>
-          </ul>
-        </article>
-        {/* END OF Apoyo en Entornos Veterinarios*/ }
-        <article className="service">
-          <div className="service__head">
-            <h3>Atención al Cliente y Soporte Administrativo</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Experiencia en atención al cliente multicanal (teléfono, chat y correo), 
-                con enfoque en el mercado español. Resolución de incidencias, seguimiento de casos 
-                y manejo de CRM y herramientas ofimáticas como Excel.. </p>
-            </li>
-            
-          </ul>
-        </article>
-        {/* END OF Atención al Cliente y Soporte Administrativo*/ }
-        <article className="service">
-          <div className="service__head">
-            <h3>Gestión de Ventas y Back Office</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Seguimiento de ventas, recuperación de clientes y apoyo a equipos comerciales mediante 
-                análisis y control de datos. Dominio de herramientas internas y hojas de cálculo para generar 
-                reportes y asegurar trazabilidad.</p>
-            </li>
-            
-          </ul>
-        </article>
-        {/* END OF Gestión de Ventas y Back Office*/ }
-        <article className="service">
-          <div className="service__head">
-            <h3>Asistencia en Procesos Educativos</h3> 
-          </div>
-          <ul className="service__list">
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>Apoyo en aulas escolares como auxiliar docente, con habilidades para trabajar con niños 
-                en etapa primaria. Preparación de materiales, acompañamiento en clases y refuerzo académico 
-                individual.</p>
-            </li>
-          </ul>
-        </article>
-        {/* END OF Asistencia en Procesos Educativos*/ }
+      <div className="container services__container" ref={gridRef}>
+        {skills.map((skill, i) => (
+          <article className="service" key={i}>
+            <div className="service__head">
+              <h3>{skill.title}</h3>
+            </div>
+            <ul className="service__list">
+              {skill.items.map((item, j) => (
+                <li key={j}>
+                  <BiCheck className='service__list-icon' />
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   )
