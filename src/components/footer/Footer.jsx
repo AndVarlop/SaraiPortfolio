@@ -1,34 +1,36 @@
 import React from 'react'
 import './footer.css'
-import {FaFacebookF} from 'react-icons/fa'
-import {FiInstagram} from 'react-icons/fi'
-import {IoLogoTwitter} from 'react-icons/io'
+import { BsLinkedin } from 'react-icons/bs'
+import { FiInstagram } from 'react-icons/fi'
+import { IoLogoTwitter } from 'react-icons/io'
 
-const footer = () => {
+const Footer = () => {
   return (
     <footer>
-      <a href="#" className='footer__logo'>Saraí Garcia</a>
+      <a href="#" className='footer__logo'>Saraí García</a>
 
       <ul className='permalinks'>
         <li><a href="#">Inicio</a></li>
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#education">Educación</a></li>
-        <li><a href="#services">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#education">Formación</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
 
       <div className="footer__socials">
-        <a href="https://www.facebook.com/sarai.blue.5/" target='__blank'><FaFacebookF /></a>
-        <a href="https://www.instagram.com/saraisrgv/" target='__blank'><FiInstagram /></a>
-        <a href="https://twitter.com/Saraisrgv" target='__blank'><IoLogoTwitter /></a>
+        <a href="https://www.linkedin.com/in/saraí-garcía-72149724b/" target='_blank' rel='noreferrer'><BsLinkedin /></a>
+        <a href="https://www.instagram.com/saraisrgv/" target='_blank' rel='noreferrer'><FiInstagram /></a>
+        <a href="https://twitter.com/Saraisrgv" target='_blank' rel='noreferrer'><IoLogoTwitter /></a>
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; Saraí Portfolio. All rights reserved. </small>
+        <small>&copy; {new Date().getFullYear()} Saraí García — Community Manager Junior. Todos los derechos reservados.</small>
       </div>
     </footer>
   )
 }
 
-export default footer
+export default Footer

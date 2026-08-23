@@ -1,12 +1,13 @@
 import React, { useRef as UseRef } from 'react';
 import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
-import { RiMessengerLine } from 'react-icons/ri';
-import { BsWhatsapp } from 'react-icons/bs';
+import { BsWhatsapp, BsLinkedin } from 'react-icons/bs';
+import { FiDownload, FiEye } from 'react-icons/fi';
+import CV from '../../assets/Sarai_CV.pdf';
 import emailjs from 'emailjs-com';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 
-const contact = () => {
+const Contact = () => {
   const form = UseRef();
   const sectionRef = useScrollReveal()
 
@@ -18,28 +19,36 @@ const contact = () => {
 
   return (
     <section id='contact'>
-      <h3 className='text-light'>Ponte en contacto</h3>
+      <h3 className='text-light'>¿Hablamos?</h3>
       <h2>Conmigo</h2>
+      <p className='section__lead contact__intro'>
+        Estoy buscando una oportunidad para crecer en Community Management y aportar
+        creatividad, organización y una comunicación cercana a un equipo de marketing.
+      </p>
       <div className="container contact__container" ref={sectionRef}>
         <div className="contact__options">
           <article className="contact__option">
             <MdOutlineEmail className='contact__option-icon' />
             <h4>Email</h4>
             <h6>sarairgv29@gmail.com</h6>
-            <a href="mailto:sarairgv29@gmail.com" target='_blank'>Enviar mensaje</a>
-          </article>
-          <article className="contact__option">
-            <RiMessengerLine className='contact__option-icon' />
-            <h4>Messenger</h4>
-            <h6>Saraí Garcia</h6>
-            <a href="https://m.me/saraisrgv" target='_blank'>Enviar mensaje</a>
+            <a href="mailto:sarairgv29@gmail.com" target='_blank' rel='noreferrer'>Enviar mensaje</a>
           </article>
           <article className="contact__option">
             <BsWhatsapp className='contact__option-icon' />
             <h4>WhatsApp</h4>
             <h6>+57 3014030939</h6>
-            <a href="https://api.whatsapp.com/send?phone=573014030939" target='_blank'>Enviar mensaje</a>
+            <a href="https://api.whatsapp.com/send?phone=573014030939" target='_blank' rel='noreferrer'>Enviar mensaje</a>
           </article>
+          <article className="contact__option">
+            <BsLinkedin className='contact__option-icon' />
+            <h4>LinkedIn</h4>
+            <h6>Saraí García</h6>
+            <a href="https://www.linkedin.com/in/saraí-garcía-72149724b/" target='_blank' rel='noreferrer'>Ver perfil</a>
+          </article>
+          <div className='contact__cv'>
+            <a href={CV} download className='btn btn-cv'><FiDownload /> Descargar CV</a>
+            <a href={CV} target='_blank' rel='noreferrer' className='btn btn-cv'><FiEye /> Ver CV</a>
+          </div>
         </div>
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Tu nombre completo' required />
@@ -52,4 +61,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

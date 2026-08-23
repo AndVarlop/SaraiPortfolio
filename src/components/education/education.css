@@ -17,7 +17,6 @@
     border-radius: 1.5rem;
     padding: 2rem;
     transition: var(--transition);
-    backdrop-filter: blur(8px);
 }
 
 .edu__card:hover {

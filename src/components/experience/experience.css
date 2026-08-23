@@ -22,7 +22,6 @@
     border-radius: 1.5rem;
     border: 1px solid var(--color-border);
     transition: var(--transition);
-    backdrop-filter: blur(8px);
 }
 
 .experience__container_alone > div {
@@ -32,7 +31,6 @@
     border-radius: 1.5rem;
     border: 1px solid var(--color-border);
     transition: var(--transition);
-    backdrop-filter: blur(8px);
 }
 
 .experience__container > div:hover {
@@ -109,6 +107,30 @@
 .experience__details-icon {
     margin-top: 6px;
     color: var(--color-primary);
+}
+
+.experience__container > div h2 {
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+.experience__container > div h4 {
+    text-align: left;
+    font-weight: 400;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.experience__container small {
+    display: block;
+}
+
+.experience__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .experience__frontend:hover h3 {

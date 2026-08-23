@@ -3,7 +3,6 @@ import './about.css'
 import ME from '../../assets/avatar2sarai.jpg'
 import { FaAward, FaHeart } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from 'react-icons/vsc'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const About = () => {
@@ -13,11 +12,11 @@ const About = () => {
   return (
     <section id='about'>
       <h3>Para saber</h3>
-      <h1>Acerca de mí</h1>
+      <h1>Sobre mí</h1>
       <div className="container about__container">
         <div className="about__me" ref={imageRef}>
           <div className="about__me-image">
-            <img src={ME} alt="Saraí Garcia" />
+            <img src={ME} alt="Saraí García" />
           </div>
         </div>
 
@@ -30,24 +29,44 @@ const About = () => {
             </article>
             <article className="about__card">
               <FiUsers className='about__icon' />
-              <h3>7+ Empleos</h3>
-              <small>Desde 2018</small>
+              <h3>+5 años</h3>
+              <small>Conectando con clientes</small>
             </article>
             <article className="about__card">
               <FaHeart className='about__icon' />
-              <h3>Bienestar Animal</h3>
-              <small>Pasión veterinaria</small>
+              <h3>En transición</h3>
+              <small>Hacia contenido y redes</small>
             </article>
           </div>
+
           <p>
-            Auxiliar veterinaria y agente de back office con experiencia en atención al cliente,
-            gestión de información y apoyo en procesos administrativos y operativos.
-            Me distingo por ser responsable, organizada y empática, con sólidas habilidades
-            para el trabajo en equipo y una marcada orientación al cumplimiento de objetivos.
-            Apasionada por el bienestar animal, cuento con experiencia en apoyo clínico
-            y en la generación de soluciones eficientes tanto en entornos clínicos como corporativos.
+            Durante años he trabajado del lado humano de las marcas: atendiendo clientes,
+            resolviendo dudas, acompañando ventas y cuidando cada conversación como si fuera
+            la única que importa. Empecé como asesora comercial, pasé por back office,
+            atención multicanal y hasta por las prácticas clínicas de un centro de bienestar
+            animal — espacios distintos, con algo en común: escuchar a las personas y
+            ayudarlas a encontrar una solución.
           </p>
-          <a href="#contact" className='btn btn-primary'>Hablemos</a>
+          <p>
+            Hoy quiero llevar esa misma sensibilidad al mundo digital. Me apasiona crear
+            contenido, entender qué hace que una audiencia se detenga a leer, comente o
+            comparta, y construir — publicación a publicación — comunidades con las que las
+            marcas quieran seguir hablando. Estoy en formación activa en redes sociales,
+            copywriting y gestión de contenido, y busco mi primera oportunidad como
+            <strong> Community Manager Junior</strong> para seguir creciendo dentro de un
+            equipo de marketing.
+          </p>
+
+          <blockquote className='about__quote'>
+            “Durante años escuché personas, entendí sus necesidades y las ayudé a encontrar
+            soluciones. Hoy quiero llevar esa experiencia al mundo digital, donde una
+            conversación puede convertirse en comunidad y una idea, en una conexión real.”
+          </blockquote>
+
+          <div className='about__cta'>
+            <a href="#experience" className='btn'>Conocer mi experiencia</a>
+            <a href="#contact" className='btn btn-primary'>Hablemos</a>
+          </div>
         </div>
       </div>
     </section>

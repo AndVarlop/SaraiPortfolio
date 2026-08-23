@@ -17,16 +17,22 @@ header {
     gap: 0.3rem;
 }
 
-.hero__typewriter {
-    font-size: 1.1rem;
+.hero__eyebrow {
+    font-size: 1rem;
     color: var(--color-light);
-    min-height: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.hero__typewriter {
+    font-size: 1.5rem;
+    color: var(--color-light);
+    min-height: 2.2rem;
+    margin: 0.3rem 0 0.8rem;
 }
 
 .hero__typed {
     color: var(--color-primary);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .hero__cursor {
@@ -41,12 +47,52 @@ header {
     50% { opacity: 0; }
 }
 
+.hero__tagline {
+    max-width: 560px;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    font-weight: 500;
+    line-height: 1.55;
+    margin-bottom: 0.6rem;
+}
+
+.hero__sub {
+    max-width: 520px;
+    font-size: 0.92rem;
+    margin-bottom: 0.8rem;
+}
+
 .cta {
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.cta__row {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.cta__row-cv {
+    gap: 0.8rem;
+}
+
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    padding: 0.6rem 1.2rem;
+    color: var(--color-light);
+    border-color: var(--color-border);
+}
+
+.btn-cv:hover {
+    color: var(--color-primary);
 }
 
 .header__socials {

@@ -36,7 +36,7 @@ const Education = () => {
   return (
     <section id='education'>
       <h3>Formación académica</h3>
-      <h2>Educación</h2>
+      <h2>Formación</h2>
       <div className="container edu__container" ref={cardsRef}>
         {studies.map((study, i) => (
           <div className="edu__card" key={i}>

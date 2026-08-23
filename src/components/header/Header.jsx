@@ -6,7 +6,7 @@ import HeaderSocials from './HeaderSocials'
 import useTypewriter from '../../hooks/useTypewriter'
 import { animate, stagger } from 'animejs'
 
-const ROLES = ['Back Office', 'Auxiliar Veterinaria', 'Atención al Cliente', 'Gestión de Datos']
+const ROLES = ['Community Manager Junior', 'Social Media Assistant', 'Content Assistant', 'Marketing Digital Junior']
 
 const Header = () => {
   const typedRole = useTypewriter(ROLES)
@@ -41,17 +41,25 @@ const Header = () => {
     <header>
       <div className="container header_container">
         <div className='hero__content' ref={contentRef}>
-          <h2>Hola, soy</h2>
-          <h1>Saraí Garcia</h1>
+          <span className='hero__eyebrow'>Hola, soy</span>
+          <h1>Saraí García</h1>
           <div className='hero__typewriter'>
             <span className='hero__typed'>{typedRole}</span>
             <span className='hero__cursor'>|</span>
           </div>
+          <p className='hero__tagline'>
+            Creo contenido, conecto con las personas y ayudo a las marcas a construir
+            comunidades que quieran quedarse.
+          </p>
+          <p className='hero__sub text-light'>
+            Vengo del mundo de la atención al cliente y las ventas — hoy quiero aplicar esa
+            experiencia escuchando personas a la creación de contenido y la gestión de redes.
+          </p>
           <CTA />
           <HeaderSocials />
         </div>
         <div className="me" ref={imageRef}>
-          <img src={ME} alt="Saraí" />
+          <img src={ME} alt="Saraí García" />
         </div>
         <a href="#contact" className='scroll__down'>Scroll Down</a>
       </div>

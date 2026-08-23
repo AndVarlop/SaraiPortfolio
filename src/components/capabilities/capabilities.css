@@ -1,81 +1,88 @@
-#servicios {
+#capacidades {
     padding-top: 2rem;
     height: auto;
 }
 
-.offerings__grid {
+.capabilities__grid {
     padding-top: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-.offering__card {
+.capability__card {
     background: var(--color-surface);
-    border-radius: 1.2rem;
     border: 1px solid var(--color-border);
-    padding: 1.8rem;
+    border-radius: 1.2rem;
+    padding: 1.8rem 1.4rem;
     transition: var(--transition);
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-.offering__card:hover {
+.capability__card:hover {
     background: var(--color-primary-glow);
     border-color: rgba(210, 155, 253, 0.35);
     transform: translateY(-4px);
     box-shadow: 0 16px 40px rgba(210, 155, 253, 0.08);
 }
 
-.offering__icon {
+.capability__icon {
     color: var(--color-primary);
-    font-size: 1.6rem;
-    flex-shrink: 0;
-    margin-top: 0.2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
 }
 
-.offering__card h4 {
+.capability__card h4 {
     font-size: 1rem;
-    text-align: left;
+    font-weight: 600;
     color: var(--color-white);
-    margin-bottom: 0.4rem;
 }
 
-.offering__card p {
-    font-size: 0.85rem;
+.capability__card p {
     color: var(--color-light);
+    font-size: 0.85rem;
     line-height: 1.5;
+    flex-grow: 1;
+}
+
+.capability__card .tag-pill {
+    align-self: flex-start;
+    margin-top: 0.3rem;
 }
 
 /* ============== MEDIUM DEVICES =============== */
+@media screen and (max-width: 1200px) {
+    .capabilities__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media screen and (max-width: 1024px) {
-    #servicios {
-        height: auto;
+    #capacidades {
         padding-top: 4rem;
     }
-    .offerings__grid {
-        grid-template-columns: 1fr 1fr;
+    .capabilities__grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem;
     }
 }
 
 /* ============== TABLET =============== */
 @media screen and (max-width: 768px) {
-    #servicios {
+    #capacidades {
         padding-top: 3rem;
-    }
-    .offerings__grid {
-        grid-template-columns: 1fr;
     }
 }
 
 /* ============== SMALL DEVICES =============== */
 @media screen and (max-width: 480px) {
-    #servicios {
-        padding-top: 2rem;
+    .capabilities__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
-    .offering__card {
-        padding: 1.2rem;
+    .capability__card {
+        padding: 1.4rem;
     }
 }

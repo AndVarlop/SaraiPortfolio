@@ -1,0 +1,252 @@
+#proyectos {
+    padding-top: 2rem;
+    height: auto;
+}
+
+.projects__grid {
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project__card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project__card:hover {
+    border-color: rgba(210, 155, 253, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(210, 155, 253, 0.12);
+}
+
+.project__cover {
+    position: relative;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project__emoji {
+    position: absolute;
+    top: 1rem;
+    left: 1.2rem;
+    font-size: 1.6rem;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+/* Mini phone mockup */
+.project__phone {
+    width: 6.4rem;
+    height: 10.5rem;
+    background: rgba(7, 9, 26, 0.75);
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1.2rem;
+    padding: 0.5rem 0.4rem 0.4rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    transform: rotate(-4deg);
+    transition: var(--transition);
+}
+
+.project__card:hover .project__phone {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.project__phone-notch {
+    width: 1.6rem;
+    height: 0.3rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    margin: 0 auto 0.4rem;
+}
+
+.project__phone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    height: calc(100% - 0.7rem);
+}
+
+.project__phone-grid span {
+    border-radius: 3px;
+}
+
+.project__body {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.project__body h3 {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.project__body p {
+    color: var(--color-light);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin: 0.3rem 0 0.6rem;
+    flex-grow: 1;
+}
+
+.project__pillars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.project__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ============== Case study modal ============== */
+
+.case__panel {
+    text-align: left;
+}
+
+.case__title {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-top: 0.6rem;
+}
+
+.case__category {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.case__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.case__block h4, .case__section h4 {
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+}
+
+.case__block p {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.case__section {
+    margin-bottom: 1.8rem;
+}
+
+.case__pillars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.case__pieces {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.case__piece {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.case__piece strong {
+    font-size: 0.95rem;
+    color: var(--color-white);
+}
+
+.case__copy {
+    color: var(--color-light);
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.case__cta {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.case__slides {
+    padding-left: 1.1rem;
+    color: var(--color-light);
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.case__kpi-note {
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+}
+
+/* ============== MEDIUM DEVICES =============== */
+@media screen and (max-width: 1024px) {
+    #proyectos {
+        padding-top: 4rem;
+    }
+    .projects__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .case__pieces {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============== TABLET =============== */
+@media screen and (max-width: 768px) {
+    #proyectos {
+        padding-top: 3rem;
+    }
+    .case__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============== SMALL DEVICES =============== */
+@media screen and (max-width: 480px) {
+    .projects__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .project__body {
+        padding: 1.2rem;
+    }
+    .case__title {
+        font-size: 1.4rem;
+    }
+}

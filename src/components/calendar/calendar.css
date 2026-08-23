@@ -1,0 +1,124 @@
+.calendar__wrap {
+    margin-top: 4rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    padding: 2.2rem;
+    backdrop-filter: blur(8px);
+}
+
+.calendar__intro {
+    max-width: 640px;
+    margin: 0 auto 1.8rem;
+    text-align: center;
+}
+
+.calendar__intro h4 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.calendar__intro p {
+    font-size: 0.9rem;
+}
+
+.calendar__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.7rem;
+    margin-bottom: 1.8rem;
+}
+
+.calendar__day {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: 0.9rem;
+    padding: 0.9rem 0.4rem;
+    color: var(--color-light);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: inherit;
+}
+
+.calendar__day:hover {
+    border-color: rgba(210, 155, 253, 0.4);
+    color: var(--color-white);
+}
+
+.calendar__day.is-active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #07091A;
+}
+
+.calendar__day-name {
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+.calendar__day-pillar {
+    font-size: 0.68rem;
+    opacity: 0.85;
+}
+
+.calendar__detail {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-border);
+    border-radius: 1.2rem;
+    padding: 1.6rem;
+}
+
+.calendar__detail-row {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.calendar__detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.calendar__detail-grid dt {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.calendar__detail-grid dd {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* ============== MEDIUM DEVICES =============== */
+@media screen and (max-width: 1024px) {
+    .calendar__wrap {
+        padding: 1.6rem;
+    }
+    .calendar__days {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ============== SMALL DEVICES =============== */
+@media screen and (max-width: 600px) {
+    .calendar__days {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    .calendar__detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .calendar__day {
+        padding: 0.7rem 0.3rem;
+    }
+}
