@@ -32,14 +32,14 @@ const ProjectModal = ({ project, onClose }) => {
 
         {project.real && project.instagram && (
           <p className='case__instagram'>
-            <a href={project.instagramUrl} target='_blank' rel='noreferrer'>{project.instagram}</a> — cuenta real del cliente
+            <a href={project.instagramUrl} target='_blank' rel='noreferrer'>{project.instagram}</a> — cuenta real de la marca (cliente potencial)
           </p>
         )}
 
         {project.coverImages && (
           <div className='case__real-gallery'>
             {project.coverImages.map((img, i) => (
-              <img src={img} alt={`Pieza real de ${project.title}`} key={i} loading='lazy' />
+              <img src={img} alt={`Foto real del negocio de ${project.title}`} key={i} loading='lazy' />
             ))}
           </div>
         )}
@@ -71,7 +71,7 @@ const ProjectModal = ({ project, onClose }) => {
         </div>
 
         <div className='case__section'>
-          <h4>Contenido creado</h4>
+          <h4>{project.real ? 'Contenido propuesto' : 'Contenido creado'}</h4>
           <div className='case__pieces'>
             {project.posts.map((post, i) => (
               <div className='case__piece' key={`post-${i}`}>

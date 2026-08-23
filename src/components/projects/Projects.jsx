@@ -15,8 +15,8 @@ const Projects = () => {
       <h3>Así trabajo</h3>
       <h2>Proyectos de contenido</h2>
       <p className='section__lead'>
-        Un caso real con un cliente propio: la propuesta de reorganización de feed que hice
-        para una peluquería con cuenta activa en Instagram.
+        Una propuesta real que armé para un cliente potencial: cómo reorganizaría el feed de
+        una peluquería con cuenta activa en Instagram si trabajara con ellos.
       </p>
 
       <div className={`container projects__grid ${projectsData.length === 1 ? 'projects__grid--single' : ''}`} ref={gridRef}>

@@ -1,4 +1,9 @@
-// El primer proyecto es un caso real: Queen Esthetic JBV fue un cliente real de Saraí.
+// El primer proyecto es una propuesta para un cliente POTENCIAL: Queen Esthetic JBV es una
+// peluquería real (con Instagram real), pero Saraí todavía no ha trabajado con ellos — este
+// es el pitch/propuesta que armó para intentar ofrecerles sus servicios como Community
+// Manager, no un trabajo ya entregado. Por eso el copy nunca afirma que publicó nada ni que
+// generó resultados: solo que armó una propuesta y diseñó ejemplos de piezas.
+//
 // Los proyectos conceptuales (más abajo, en `conceptualProjects`) están desactivados por
 // ahora a pedido de Andrés — no se muestran en el sitio, pero se dejan listos en el código
 // para reactivarlos más adelante. Para reactivarlos, solo hay que agregarlos de vuelta al
@@ -12,30 +17,30 @@ import queenNails from '../assets/projects/queen-nails.jpg'
 const realProject = {
   id: 'queen-esthetic',
   real: true,
-  tag: 'Cliente real',
+  tag: 'Cliente potencial',
   category: 'Peluquería · Estética',
   title: 'Queen Esthetic JBV',
   client: 'Queen Esthetic JBV',
   instagram: '@queenestheticjbv',
   instagramUrl: 'https://www.instagram.com/queenestheticjbv/',
-  summary: 'Reorganización de la estrategia de feed para una peluquería y centro de estética con cuenta activa en Instagram.',
+  summary: 'Propuesta de reorganización de feed para una peluquería real, pensada para mostrarle cómo trabajaría con ellos como Community Manager.',
   cover: queenFeed,
   coverImages: [queenTeam, queenNails, queenSalon],
-  problem: 'La cuenta de Instagram de la peluquería (@queenestheticjbv, cuenta real con más de 5.000 seguidores) tenía un feed desorganizado, sin una línea editorial clara ni variedad de formatos.',
-  objective: 'Ordenar el feed y definir pilares de contenido claros para que cada publicación tuviera un propósito y una identidad visual coherente.',
+  problem: 'Al revisar la cuenta de Instagram de esta peluquería real (@queenestheticjbv, más de 5.000 seguidores), noté que el feed no tenía una línea editorial clara ni variedad de formatos.',
+  objective: 'Armar una propuesta concreta de cómo podría verse su feed con una estrategia de contenido definida, para poder ofrecerles mis servicios como Community Manager.',
   audience: 'Clientas actuales y potenciales del sector belleza en la zona de Parque Alegra, interesadas en servicios de peluquería, uñas y estética.',
-  strategy: 'Se propuso alternar el contenido entre ubicación/acceso al local, tips educativos de cuidado (uñas y cabello), contenido detrás de cámaras y fotos reales del equipo y el espacio, en lugar de publicar sin un orden definido.',
+  strategy: 'Propondría alternar el contenido entre ubicación/acceso al local, tips educativos de cuidado (uñas y cabello), contenido detrás de cámaras y fotos del equipo y el espacio, en lugar de publicar sin un orden definido.',
   pillars: ['Ubicación', 'Educativo', 'Detrás de cámaras', 'Equipo y espacio'],
   posts: [
-    { format: 'Story', title: '¿Cómo llegar a nuestro punto físico?', copy: '¿Cómo llegar a nuestro punto físico? — story de ubicación para facilitar que las clientas encuentren el local.', cta: 'Guarda esta story para no perderte.' },
-    { format: 'Carrusel educativo', title: 'Tips para cuidar tus uñas', copy: 'No las uses como herramienta · Usa aceite para cutículas · Usa guantes de limpieza · Lava bien tus manos y tus uñas · Respeta los tiempos de retoque.', cta: 'Guarda estos tips para tu próxima cita.' }
+    { format: 'Story (propuesta)', title: '¿Cómo llegar a nuestro punto físico?', copy: '¿Cómo llegar a nuestro punto físico? — ejemplo de story de ubicación para facilitar que las clientas encuentren el local.', cta: 'Guarda esta story para no perderte.' },
+    { format: 'Carrusel educativo (propuesta)', title: 'Tips para cuidar tus uñas', copy: 'No las uses como herramienta · Usa aceite para cutículas · Usa guantes de limpieza · Lava bien tus manos y tus uñas · Respeta los tiempos de retoque.', cta: 'Guarda estos tips para tu próxima cita.' }
   ],
   stories: [
-    { format: 'Video BTS', title: 'Así trabajamos', copy: 'Contenido detrás de cámaras mostrando el proceso real de atención a las clientas, grabado con ring light y celular en el mismo salón.' }
+    { format: 'Video BTS (idea propuesta)', title: 'Así trabajamos', copy: 'Idea de contenido detrás de cámaras que propondría grabar en el salón, mostrando el proceso real de atención a las clientas.' }
   ],
   reel: { title: 'Tips para un cabello hidratado', desc: 'Propuesta de carrusel/reel educativo en 5 pasos sobre hidratación capilar, pensado para reforzar el pilar educativo del feed.' },
   kpis: ['Alcance', 'Guardados', 'Comentarios', 'Crecimiento de seguidores', 'Reconocimiento de marca'],
-  note: 'Este es un proyecto real hecho para un cliente real. Como no se hizo una medición formal de resultados, aquí no se muestran cifras de crecimiento — solo la propuesta de reorganización de feed y las piezas que se diseñaron.'
+  note: 'Queen Esthetic JBV es un cliente potencial, no un trabajo ya entregado: todavía no he trabajado formalmente con esta marca. Esta es la propuesta que armé para poder ofrecerles mis servicios como Community Manager — por eso no hay cifras de resultados, solo la estrategia y los ejemplos de piezas que les mostraría.'
 }
 
 // -- Desactivados por ahora — no se muestran en el sitio, pero quedan exportados por si
