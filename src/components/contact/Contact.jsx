@@ -1,7 +1,7 @@
 import React, { useRef as UseRef } from 'react';
 import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
-import { BsWhatsapp, BsLinkedin } from 'react-icons/bs';
+import { BsWhatsapp, BsTiktok } from 'react-icons/bs';
 import { FiDownload, FiEye } from 'react-icons/fi';
 import CV from '../../assets/SaraiGarcia_CV.pdf';
 import emailjs from 'emailjs-com';
@@ -40,10 +40,10 @@ const Contact = () => {
             <a href="https://api.whatsapp.com/send?phone=573014030939" target='_blank' rel='noreferrer'>Enviar mensaje</a>
           </article>
           <article className="contact__option">
-            <BsLinkedin className='contact__option-icon' />
-            <h4>LinkedIn</h4>
-            <h6>Saraí García</h6>
-            <a href="https://www.linkedin.com/in/saraí-garcía-72149724b/" target='_blank' rel='noreferrer'>Ver perfil</a>
+            <BsTiktok className='contact__option-icon' />
+            <h4>TikTok</h4>
+            <h6>@saraisrgv</h6>
+            <a href="https://www.tiktok.com/@saraisrgv" target='_blank' rel='noreferrer'>Ver perfil</a>
           </article>
           <div className='contact__cv'>
             <a href={CV} download='Sarai_Garcia_CV.pdf' className='btn btn-cv'><FiDownload /> Descargar CV</a>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import { BsLinkedin } from 'react-icons/bs'
+import { BsTiktok } from 'react-icons/bs'
 import { FiInstagram } from 'react-icons/fi'
 import { IoLogoTwitter } from 'react-icons/io'
 
@@ -21,9 +21,9 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://www.linkedin.com/in/saraí-garcía-72149724b/" target='_blank' rel='noreferrer'><BsLinkedin /></a>
-        <a href="https://www.instagram.com/saraisrgv/" target='_blank' rel='noreferrer'><FiInstagram /></a>
-        <a href="https://twitter.com/Saraisrgv" target='_blank' rel='noreferrer'><IoLogoTwitter /></a>
+        <a href="https://www.tiktok.com/@saraisrgv" target='_blank' rel='noreferrer' aria-label='TikTok'><BsTiktok /></a>
+        <a href="https://www.instagram.com/saraisrgv/" target='_blank' rel='noreferrer' aria-label='Instagram'><FiInstagram /></a>
+        <a href="https://twitter.com/Saraisrgv" target='_blank' rel='noreferrer' aria-label='Twitter'><IoLogoTwitter /></a>
       </div>
 
       <div className="footer__copyright">
