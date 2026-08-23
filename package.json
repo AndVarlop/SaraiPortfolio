@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://andvarlop.github.io/SaraiPortfolio",
+  "homepage": "https://saraiporfolio.devandvar.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

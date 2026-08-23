@@ -17,9 +17,23 @@ const ProjectModal = ({ project, onClose }) => {
       <div className='modal__panel case__panel' onClick={(e) => e.stopPropagation()}>
         <button className='modal__close' onClick={onClose} aria-label='Cerrar'><IoClose /></button>
 
-        <span className='tag-pill'>{project.tag}</span>
+        <span className={`tag-pill ${project.real ? 'tag-pill--real' : ''}`}>{project.tag}</span>
         <h2 className='case__title'>{project.title}</h2>
         <p className='case__category text-light'>{project.category}</p>
+
+        {project.real && project.instagram && (
+          <p className='case__instagram'>
+            <a href={project.instagramUrl} target='_blank' rel='noreferrer'>{project.instagram}</a> — cuenta real del cliente
+          </p>
+        )}
+
+        {project.coverImages && (
+          <div className='case__real-gallery'>
+            {project.coverImages.map((img, i) => (
+              <img src={img} alt={`Pieza real de ${project.title}`} key={i} />
+            ))}
+          </div>
+        )}
 
         <div className='case__grid'>
           <div className='case__block'>
@@ -96,8 +110,9 @@ const ProjectModal = ({ project, onClose }) => {
         <div className='case__section'>
           <h4>KPIs que mediría</h4>
           <p className='case__kpi-note text-light'>
-            Al ser un proyecto conceptual, no hay resultados reales que mostrar. Estos son los
-            indicadores con los que evaluaría el desempeño de esta estrategia:
+            {project.real
+              ? (project.note || 'No se hizo una medición formal de resultados en este proyecto. Estos son los indicadores con los que evaluaría su desempeño:')
+              : 'Al ser un proyecto conceptual, no hay resultados reales que mostrar. Estos son los indicadores con los que evaluaría el desempeño de esta estrategia:'}
           </p>
           <div className='case__pillars'>
             {project.kpis.map((k, i) => <span className='tag-pill' key={i}>{k}</span>)}

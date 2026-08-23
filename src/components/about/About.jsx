@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/avatar2sarai.jpg'
+import ME from '../../assets/about-sarai.jpg'
 import { FaAward, FaHeart } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { useScrollReveal } from '../../hooks/useScrollReveal'

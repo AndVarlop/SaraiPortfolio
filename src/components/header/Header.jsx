@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import './header.css'
 import CTA from './CTA.jsx'
-import ME from '../../assets/AvatarSaru.jpg'
+import ME from '../../assets/hero-sarai.jpg'
 import HeaderSocials from './HeaderSocials'
 import useTypewriter from '../../hooks/useTypewriter'
 import { animate, stagger } from 'animejs'

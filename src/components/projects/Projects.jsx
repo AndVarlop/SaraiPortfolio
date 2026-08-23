@@ -15,31 +15,38 @@ const Projects = () => {
       <h3>Así trabajo</h3>
       <h2>Proyectos de contenido</h2>
       <p className='section__lead'>
-        Casos prácticos y conceptuales que creé para demostrar cómo pienso una estrategia de
-        contenido, no marcas ni clientes reales — cada uno está identificado como tal.
+        Un caso real con un cliente, y varios proyectos conceptuales que creé para demostrar
+        cómo pienso una estrategia de contenido. Cada uno está identificado claramente como
+        "Cliente real" o "Proyecto conceptual".
       </p>
 
       <div className='container projects__grid' ref={gridRef}>
         {projectsData.map((p) => (
           <article className='project__card' key={p.id} onClick={() => setActive(p)}>
-            <div
-              className='project__cover'
-              style={{ background: `linear-gradient(145deg, ${p.cover.from}, ${p.cover.to})` }}
-            >
-              <span className='project__emoji'>{p.cover.emoji}</span>
+            {p.real ? (
+              <div className='project__cover project__cover--real'>
+                <img src={p.cover} alt={`Feed propuesto para ${p.title}`} />
+              </div>
+            ) : (
+              <div
+                className='project__cover'
+                style={{ background: `linear-gradient(145deg, ${p.cover.from}, ${p.cover.to})` }}
+              >
+                <span className='project__emoji'>{p.cover.emoji}</span>
 
-              <div className='project__phone'>
-                <div className='project__phone-notch' />
-                <div className='project__phone-grid'>
-                  {Array.from({ length: 6 }).map((_, i) => (
-                    <span key={i} style={{ background: `linear-gradient(145deg, ${p.cover.from}${i % 2 ? '55' : 'aa'}, ${p.cover.to}${i % 2 ? 'aa' : '55'})` }} />
-                  ))}
+                <div className='project__phone'>
+                  <div className='project__phone-notch' />
+                  <div className='project__phone-grid'>
+                    {Array.from({ length: 6 }).map((_, i) => (
+                      <span key={i} style={{ background: `linear-gradient(145deg, ${p.cover.from}${i % 2 ? '55' : 'aa'}, ${p.cover.to}${i % 2 ? 'aa' : '55'})` }} />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             <div className='project__body'>
-              <span className='tag-pill'>{p.tag}</span>
+              <span className={`tag-pill ${p.real ? 'tag-pill--real' : ''}`}>{p.tag}</span>
               <h3>{p.title}</h3>
               <small className='text-light'>{p.category}</small>
               <p>{p.summary}</p>

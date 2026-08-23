@@ -197,6 +197,11 @@ img {
     color: var(--color-light);
 }
 
+.tag-pill--real {
+    background: rgba(122, 224, 149, 0.16);
+    color: #7ae095;
+}
+
 .section__lead {
     max-width: 640px;
     margin: 0.6rem auto 0;
