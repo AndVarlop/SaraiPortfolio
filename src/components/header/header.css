@@ -133,6 +133,13 @@ header {
     box-shadow: 0 0 60px rgba(210, 155, 253, 0.08);
 }
 
+.me img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
 .scroll__down {
     display: flex;
     flex-direction: column;
@@ -200,7 +207,7 @@ header {
 }
 
 /* ============== TABLET =============== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     header {
         height: auto;
         min-height: 100vh;
@@ -238,6 +245,25 @@ header {
     }
     .cta {
         gap: 0.6rem;
+    }
+}
+
+/* Very narrow phones: stack CTAs full-width so nothing feels cramped or hard to tap */
+@media screen and (max-width: 400px) {
+    .cta__row {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.7rem;
+    }
+    .cta__row .btn {
+        width: 100%;
+    }
+    .cta__row-cv {
+        flex-direction: row;
+    }
+    .cta__row-cv .btn {
+        width: auto;
+        flex: 1;
     }
 }
 

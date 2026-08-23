@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { IoClose } from 'react-icons/io5'
 
 const ProjectModal = ({ project, onClose }) => {
+  const closeRef = useRef(null)
+
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
+    closeRef.current?.focus()
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
@@ -14,8 +17,14 @@ const ProjectModal = ({ project, onClose }) => {
 
   return (
     <div className='modal__overlay' onClick={onClose}>
-      <div className='modal__panel case__panel' onClick={(e) => e.stopPropagation()}>
-        <button className='modal__close' onClick={onClose} aria-label='Cerrar'><IoClose /></button>
+      <div
+        className='modal__panel case__panel'
+        role='dialog'
+        aria-modal='true'
+        aria-label={`Caso de estudio: ${project.title}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button ref={closeRef} className='modal__close' onClick={onClose} aria-label='Cerrar'><IoClose /></button>
 
         <span className={`tag-pill ${project.real ? 'tag-pill--real' : ''}`}>{project.tag}</span>
         <h2 className='case__title'>{project.title}</h2>
@@ -30,7 +39,7 @@ const ProjectModal = ({ project, onClose }) => {
         {project.coverImages && (
           <div className='case__real-gallery'>
             {project.coverImages.map((img, i) => (
-              <img src={img} alt={`Pieza real de ${project.title}`} key={i} />
+              <img src={img} alt={`Pieza real de ${project.title}`} key={i} loading='lazy' />
             ))}
           </div>
         )}

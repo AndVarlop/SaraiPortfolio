@@ -10,6 +10,11 @@
     gap: 2rem;
 }
 
+.projects__grid--single {
+    grid-template-columns: 1fr;
+    max-width: 26rem;
+}
+
 .project__card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -267,7 +272,7 @@
 }
 
 /* ============== TABLET =============== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #proyectos {
         padding-top: 3rem;
     }
@@ -287,5 +292,21 @@
     }
     .case__title {
         font-size: 1.4rem;
+    }
+    .case__real-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    .case__real-gallery img {
+        height: 6.5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .case__real-gallery {
+        grid-template-columns: 1fr;
+    }
+    .case__real-gallery img {
+        height: 9rem;
     }
 }

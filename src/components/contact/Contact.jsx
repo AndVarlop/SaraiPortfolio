@@ -3,7 +3,7 @@ import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import { BsWhatsapp, BsLinkedin } from 'react-icons/bs';
 import { FiDownload, FiEye } from 'react-icons/fi';
-import CV from '../../assets/Sarai_CV.pdf';
+import CV from '../../assets/SaraiGarcia_CV.pdf';
 import emailjs from 'emailjs-com';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 
@@ -46,15 +46,21 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/saraí-garcía-72149724b/" target='_blank' rel='noreferrer'>Ver perfil</a>
           </article>
           <div className='contact__cv'>
-            <a href={CV} download className='btn btn-cv'><FiDownload /> Descargar CV</a>
+            <a href={CV} download='Sarai_Garcia_CV.pdf' className='btn btn-cv'><FiDownload /> Descargar CV</a>
             <a href={CV} target='_blank' rel='noreferrer' className='btn btn-cv'><FiEye /> Ver CV</a>
           </div>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Tu nombre completo' required />
-          <input type="text" name="email" placeholder='Tu email' required />
-          <textarea name="message" cols="30" rows="8" placeholder='Tu mensaje' required></textarea>
-          <button type='submit' className='btn btn-primary'>Enviar Mensaje</button>
+          <label htmlFor='contact-name' className='sr-only'>Tu nombre completo</label>
+          <input id='contact-name' type="text" name='name' placeholder='Tu nombre completo' autoComplete='name' required />
+
+          <label htmlFor='contact-email' className='sr-only'>Tu email</label>
+          <input id='contact-email' type="email" name="email" placeholder='Tu email' autoComplete='email' required />
+
+          <label htmlFor='contact-message' className='sr-only'>Tu mensaje</label>
+          <textarea id='contact-message' name="message" cols="30" rows="8" placeholder='Tu mensaje' required></textarea>
+
+          <button type='submit' className='btn btn-primary contact__submit'>Enviar Mensaje</button>
         </form>
       </div>
     </section>

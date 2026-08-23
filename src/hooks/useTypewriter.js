@@ -1,12 +1,15 @@
 import { useState, useEffect, useRef } from 'react'
+import { prefersReducedMotion } from './usePrefersReducedMotion'
 
 const useTypewriter = (words, speed = 90, pause = 1800) => {
-  const [text, setText] = useState('')
+  const reduceMotion = prefersReducedMotion()
+  const [text, setText] = useState(reduceMotion ? words[0] : '')
   const [wordIndex, setWordIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const pauseRef = useRef(false)
 
   useEffect(() => {
+    if (reduceMotion) return
     if (pauseRef.current) return
 
     const current = words[wordIndex % words.length]

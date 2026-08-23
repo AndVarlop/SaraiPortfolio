@@ -15,17 +15,29 @@ const Projects = () => {
       <h3>Así trabajo</h3>
       <h2>Proyectos de contenido</h2>
       <p className='section__lead'>
-        Un caso real con un cliente, y varios proyectos conceptuales que creé para demostrar
-        cómo pienso una estrategia de contenido. Cada uno está identificado claramente como
-        "Cliente real" o "Proyecto conceptual".
+        Un caso real con un cliente propio: la propuesta de reorganización de feed que hice
+        para una peluquería con cuenta activa en Instagram.
       </p>
 
-      <div className='container projects__grid' ref={gridRef}>
+      <div className={`container projects__grid ${projectsData.length === 1 ? 'projects__grid--single' : ''}`} ref={gridRef}>
         {projectsData.map((p) => (
-          <article className='project__card' key={p.id} onClick={() => setActive(p)}>
+          <article
+            className='project__card'
+            key={p.id}
+            role='button'
+            tabIndex={0}
+            aria-label={`Ver caso de estudio: ${p.title}`}
+            onClick={() => setActive(p)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                setActive(p)
+              }
+            }}
+          >
             {p.real ? (
               <div className='project__cover project__cover--real'>
-                <img src={p.cover} alt={`Feed propuesto para ${p.title}`} />
+                <img src={p.cover} alt={`Feed propuesto para ${p.title}`} loading='lazy' />
               </div>
             ) : (
               <div

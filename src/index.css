@@ -53,15 +53,17 @@ body {
 
 .container {
     width: var(--container-width-lg);
+    max-width: 1240px;
     margin: 0 auto;
 }
 
 h1{
     color: var(--color-white);
-    font-size: 3rem;
+    font-size: clamp(1.9rem, 1.1rem + 3.6vw, 3rem);
     text-align: center;
     font-weight: 700;
     letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 
 hr{
@@ -69,20 +71,22 @@ hr{
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.82rem + 0.35vw, 1rem);
     text-align: center;
     font-weight: 500;
 }
 
 h2,h5 {
-    font-size: 2rem;
+    font-size: clamp(1.55rem, 1.15rem + 1.8vw, 2rem);
     text-align: center;
+    line-height: 1.2;
 }
 
 section {
-    margin-top: 8rem;
+    margin-top: clamp(3.5rem, 2.5rem + 4vw, 8rem);
     height: auto;
     min-height: fit-content;
+    scroll-margin-top: 5.5rem;
 }
 
 section > h2, section > h5 {
@@ -110,6 +114,18 @@ section > h2 {
     color: var(--color-light);
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 a {
     color: var(--color-primary);
     transition: var(--transition);
@@ -120,11 +136,14 @@ a:hover{
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: max-content;
     background: transparent;
     color: var(--color-primary);
-    padding: 0.75rem 1.6rem;
+    padding: 0.85rem 1.6rem;
+    min-height: 2.9rem;
     border-radius: 0.5rem;
     cursor: pointer;
     border: 1px solid rgba(210, 155, 253, 0.35);
@@ -132,6 +151,7 @@ a:hover{
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.02em;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn:hover {
@@ -157,6 +177,8 @@ a:hover{
 img {
     display: block;
     width: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -269,26 +291,59 @@ img {
     }
 }
 
-/* ============== MEDIUM DEVICES =============== */ 
+/* ============== MEDIUM DEVICES (tablet) =============== */
 
 @media screen and (max-width:1024px) {
     .container {
         width: var(--container-width-md);
     }
-    section {
-        margin-top: 6rem;
-    }
-
 }
 
-/* ============== SMALL DEVICES =============== */ 
+/* ============== SMALL DEVICES (mobile) =============== */
 
 @media screen and (max-width:600px) {
     .container {
         width: var(--container-width-sm);
     }
-    
+
     section > h2{
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ============== ACCESSIBILITY: focus states =============== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ============== REDUCED MOTION =============== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============== LOW-HEIGHT / LANDSCAPE MOBILE =============== */
+
+@media screen and (max-height: 520px) and (orientation: landscape) {
+    section {
+        margin-top: 3rem;
     }
 }

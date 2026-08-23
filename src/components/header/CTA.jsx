@@ -1,5 +1,5 @@
 import React from 'react'
-import CV from '../../assets/Sarai_CV.pdf'
+import CV from '../../assets/SaraiGarcia_CV.pdf'
 import { FiDownload, FiEye } from 'react-icons/fi'
 
 const CTA = () => {
@@ -11,7 +11,7 @@ const CTA = () => {
         <a href="#contact" className='btn'>Contactarme</a>
       </div>
       <div className='cta__row cta__row-cv'>
-        <a href={CV} download className='btn btn-cv'><FiDownload /> Descargar CV</a>
+        <a href={CV} download='Sarai_Garcia_CV.pdf' className='btn btn-cv'><FiDownload /> Descargar CV</a>
         <a href={CV} target='_blank' rel='noreferrer' className='btn btn-cv'><FiEye /> Ver CV</a>
       </div>
     </div>

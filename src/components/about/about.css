@@ -21,13 +21,21 @@
 }
 
 .about__me-image {
+    width: 82%;
+    aspect-ratio: 1 / 1;
     border-color: var(--color-primary);
-    border-width: 0.2px; 
-    border-style: solid; 
+    border-width: 0.2px;
+    border-style: solid;
     border-radius: 2rem;
     overflow: hidden;
     transform: rotate(-10deg);
     transition: var(--transition);
+}
+
+.about__me-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about__me-image:hover {
@@ -131,7 +139,7 @@
 }
 
 /* ============== TABLET =============== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #about {
         padding-top: 3rem;
         padding-bottom: 3rem;

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
+import { prefersReducedMotion } from './usePrefersReducedMotion'
 
 export const useScrollReveal = (animProps = {}) => {
   const ref = useRef(null)
@@ -7,6 +8,11 @@ export const useScrollReveal = (animProps = {}) => {
   useEffect(() => {
     const el = ref.current
     if (!el) return
+
+    if (prefersReducedMotion()) {
+      el.style.opacity = '1'
+      return
+    }
 
     el.style.opacity = '0'
 
@@ -39,6 +45,11 @@ export const useStaggerReveal = (childSelector = '*', animProps = {}) => {
   useEffect(() => {
     const container = ref.current
     if (!container) return
+
+    if (prefersReducedMotion()) {
+      container.querySelectorAll(childSelector).forEach(el => { el.style.opacity = '1' })
+      return
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

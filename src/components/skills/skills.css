@@ -95,11 +95,17 @@
     border-radius: 0.9rem;
     padding: 0.9rem 1.1rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 0.6rem;
+    gap: 0.5rem 0.6rem;
     font-size: 0.9rem;
     color: var(--color-white);
+}
+
+.tool span:first-child {
+    min-width: 0;
+    word-break: break-word;
 }
 
 .tool__level {
@@ -139,7 +145,7 @@
 }
 
 /* ============== TABLET =============== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #habilidades {
         padding-top: 3rem;
     }

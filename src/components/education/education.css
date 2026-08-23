@@ -103,7 +103,7 @@
 }
 
 /* ============== TABLET =============== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #education {
         padding-top: 3rem;
         padding-bottom: 3rem;

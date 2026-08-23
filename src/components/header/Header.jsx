@@ -4,6 +4,7 @@ import CTA from './CTA.jsx'
 import ME from '../../assets/hero-sarai.jpg'
 import HeaderSocials from './HeaderSocials'
 import useTypewriter from '../../hooks/useTypewriter'
+import { prefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 import { animate, stagger } from 'animejs'
 
 const ROLES = ['Community Manager Junior', 'Social Media Assistant', 'Content Assistant', 'Marketing Digital Junior']
@@ -14,6 +15,8 @@ const Header = () => {
   const imageRef = useRef(null)
 
   useEffect(() => {
+    if (prefersReducedMotion()) return
+
     if (contentRef.current) {
       const children = Array.from(contentRef.current.children)
       children.forEach(el => { el.style.opacity = '0' })

@@ -133,6 +133,17 @@
     margin-top: 1rem;
 }
 
+/* When there's an odd number of cards, let the last one breathe across both columns
+   instead of leaving a lopsided empty slot next to it. */
+@media screen and (min-width: 768px) {
+    .experience__content:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+    .experience__content:last-child:nth-child(odd) .experience__tags {
+        max-width: 32rem;
+    }
+}
+
 .experience__frontend:hover h3 {
     color: var(--color-primary);
     transition: var(--transition);
@@ -159,7 +170,7 @@
 }
 
 /* ============== TABLET =============== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #experience {
         padding-top: 3rem;
         padding-bottom: 3rem;

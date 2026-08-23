@@ -61,13 +61,20 @@ footer a:hover {
     color: var(--color-light);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     footer {
         margin-top: 4rem;
-        padding-bottom: 6rem;
+        padding: 2.5rem 0;
+    }
+    .footer__logo {
+        margin-bottom: 1.5rem;
     }
     .permalinks {
         gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .footer__socials {
+        margin-bottom: 2rem;
     }
 }
 
